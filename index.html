@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Video Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- iOS Status Bar -->
+        <div class="ios-status-bar">
+            <span class="time">9:41</span>
+            <div class="status-icons">
+                <span class="cellular-icon"></span>
+                <span class="wifi-icon"></span>
+                <span class="battery-icon"></span>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="logo">VideoGallery</h1>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search videos...">
+            </div>
+        </header>
+
+        <!-- iOS Style Drawer Menu -->
+        <aside class="drawer" id="drawer">
+            <div class="drawer-backdrop"></div>
+            <nav class="drawer-nav">
+                <div class="drawer-header">
+                    <div class="user-profile">
+                        <div class="avatar">👤</div>
+                        <div class="user-info">
+                            <h3>John Doe</h3>
+                            <p>Premium Member</p>
+                        </div>
+                    </div>
+                    <button class="close-drawer" id="closeDrawer">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="menu-icon"><i class="fas fa-house"></i></div>
+                            <span>Home</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="menu-icon"><i class="fas fa-play-circle"></i></div>
+                            <span>My Videos</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="menu-icon"><i class="fas fa-heart"></i></div>
+                            <span>Favorites</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="menu-icon"><i class="fas fa-clock"></i></div>
+                            <span>History</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li class="menu-divider"></li>
+                    <li>
+                        <a href="#">
+                            <div class="menu-icon"><i class="fas fa-gear"></i></div>
+                            <span>Settings</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="menu-icon"><i class="fas fa-question-circle"></i></div>
+                            <span>Help</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="overlay" id="overlay"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="video-gallery">
+                <div class="ios-section-header">
+                    <h2 class="section-title">Featured Videos</h2>
+                    <a href="#" class="see-all">See All</a>
+                </div>
+                <div class="video-grid">
+                    <!-- Video Cards -->
+                    <div class="video-card ios-card">
+                        <div class="video-thumbnail">
+                            <img src="https://source.unsplash.com/random/320x180/?nature" alt="Nature">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <span class="duration">5:30</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Beautiful Nature Scenes</h3>
+                            <p class="video-channel">Nature Channel <i class="fas fa-check-circle verified"></i></p>
+                            <div class="video-meta">
+                                <span>1.2M views • 2 weeks ago</span>
+                                <button class="ios-menu-btn"><i class="fas fa-ellipsis"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card ios-card">
+                        <div class="video-thumbnail">
+                            <img src="https://source.unsplash.com/random/320x180/?city" alt="City">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <span class="duration">8:15</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">City Time Lapse</h3>
+                            <p class="video-channel">Urban Explorer</p>
+                            <div class="video-meta">
+                                <span>850K views • 1 month ago</span>
+                                <button class="ios-menu-btn"><i class="fas fa-ellipsis"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card ios-card">
+                        <div class="video-thumbnail">
+                            <img src="https://source.unsplash.com/random/320x180/?food" alt="Food">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <span class="duration">12:40</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Cooking Tutorial</h3>
+                            <p class="video-channel">Chef Master <i class="fas fa-check-circle verified"></i></p>
+                            <div class="video-meta">
+                                <span>2.3M views • 3 days ago</span>
+                                <button class="ios-menu-btn"><i class="fas fa-ellipsis"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card ios-card">
+                        <div class="video-thumbnail">
+                            <img src="https://source.unsplash.com/random/320x180/?workout" alt="Workout">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                            <span class="duration">4:22</span>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Workout Routine</h3>
+                            <p class="video-channel">Fitness Pro</p>
+                            <div class="video-meta">
+                                <span>3.1M views • 1 week ago</span>
+                                <button class="ios-menu-btn"><i class="fas fa-ellipsis"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ios-section-header">
+                    <h2 class="section-title">Recently Watched</h2>
+                    <a href="#" class="see-all">See All</a>
+                </div>
+                <div class="horizontal-scroll">
+                    <div class="video-card ios-card horizontal">
+                        <div class="video-thumbnail">
+                            <img src="https://source.unsplash.com/random/320x180/?travel" alt="Travel">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Travel Vlog: Japan</h3>
+                            <p class="video-channel">Globe Trotter</p>
+                        </div>
+                    </div>
+                    <div class="video-card ios-card horizontal">
+                        <div class="video-thumbnail">
+                            <img src="https://source.unsplash.com/random/320x180/?tech" alt="Tech">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">New Tech Review</h3>
+                            <p class="video-channel">Tech Insider</p>
+                        </div>
+                    </div>
+                    <div class="video-card ios-card horizontal">
+                        <div class="video-thumbnail">
+                            <img src="https://source.unsplash.com/random/320x180/?music" alt="Music">
+                            <div class="play-button"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Music Festival 2023</h3>
+                            <p class="video-channel">Live Events</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- iOS Tab Bar -->
+        <nav class="ios-tab-bar">
+            <a href="#" class="tab-item active">
+                <i class="fas fa-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="#" class="tab-item">
+                <i class="fas fa-compass"></i>
+                <span>Explore</span>
+            </a>
+            <a href="#" class="tab-item">
+                <i class="fas fa-plus-square"></i>
+                <span>Create</span>
+            </a>
+            <a href="#" class="tab-item">
+                <i class="fas fa-bell"></i>
+                <span>Notifications</span>
+            </a>
+            <a href="#" class="tab-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+                      </html>
